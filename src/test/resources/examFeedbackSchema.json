@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Assessment Data Schema",
+  "type": "object",
+  "required": [
+    "unlimited_submissions",
+    "fb_correct_response",
+    "passingGrade",
+    "timeCheck",
+    "pub_assessment_id",
+    "assessment_name",
+    "question_level_fb",
+    "sectionList"
+  ],
+  "properties": {
+    "unlimited_submissions": { "type": "integer" },
+    "fb_correct_response": { "type": "boolean" },
+    "passingGrade": { "type": ["number", "null"] },
+    "timeCheck": { "type": "boolean" },
+    "pass_percent": { "type": ["number", "null"] },
+    "due_date": { "type": ["string", "null"] },
+    "pub_assessment_id": { "type": "integer" },
+    "assessment_name": { "type": "string" },
+    "question_level_fb": { "type": "boolean" },
+    "submissions_allowed": { "type": ["integer", "null"] },
+    "sectionList": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["pubSectionId", "title", "sequence", "authorType", "status", "questionsList"],
+        "properties": {
+          "pubSectionId": { "type": "integer" },
+          "title": { "type": "string" },
+          "sequence": { "type": "integer" },
+          "authorType": { "type": "integer" },
+          "status": { "type": "boolean" },
+          "questionsList": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["pubQuestionId", "duration", "sequence", "qtModel", "points", "answerList"],
+              "properties": {
+                "pubQuestionId": { "type": "integer" },
+                "duration": { "type": "string" },
+                "sequence": { "type": "integer" },
+                "qtModel": {
+                  "type": "object",
+                  "required": ["id", "questionType"],
+                  "properties": {
+                    "id": { "type": "integer" },
+                    "questionType": { "type": "string" }
+                  }
+                },
+                "points": { "type": "number" },
+                "answerList": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "object",
+                    "required": ["pubAnswerId", "label", "sequence", "text", "is_correct", "score"],
+                    "properties": {
+                      "pubAnswerId": { "type": "integer" },
+                      "label": { "type": "string" },
+                      "sequence": { "type": "integer" },
+                      "text": { "type": "string" },
+                      "is_correct": { "type": "boolean" },
+                      "score": { "type": "number" }
+                    }
+                  }
+                },
+                "correctFeedbackText": { "type": ["string", "null"] },
+                "inCorrectFeedbackText": { "type": ["string", "null"] }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
