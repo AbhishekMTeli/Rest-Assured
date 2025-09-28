@@ -1,7 +1,5 @@
 package testScripts;
 
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -41,7 +39,7 @@ public class GlobalSearchTest extends BaseTest {
 		Response response = GlobalSearchEndPoints.global_Search(true, null, true, null, true, "abc");
 		ApiUtils.logResponse(response);
 		ApiUtils.validateStatusCode(response, 200);
-		AssertJUnit.assertEquals(response.asString(), "{}", "Expected empty JSON object");
+		Assert.assertEquals(response.asString(), "{}", "Expected empty JSON object");
 	}
 
 	@Test(description = "Negative: Validate Global Search API returns 401 Unauthorized when no authentication token is provided")

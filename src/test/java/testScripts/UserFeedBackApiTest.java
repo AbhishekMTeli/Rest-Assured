@@ -1,7 +1,5 @@
 package testScripts;
 
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -27,18 +25,18 @@ public class UserFeedBackApiTest extends BaseTest {
 	public void verifyUserFeedback_MissingAuthorization() {
 		Response response = ExamEndPoints.userFeedback(false, true, "13355", null, false, null);
 		ApiUtils.validateStatusCode(response, 401);
-		AssertJUnit.assertTrue(response.getContentType().contains("text/html"));
+		Assert.assertTrue(response.getContentType().contains("text/html"));
 		String body = response.getBody().asString();
-		AssertJUnit.assertTrue(body.contains("Unauthorized"));
+		Assert.assertTrue(body.contains("Unauthorized"));
 	}
 
 	@Test(description = "Verify User Feedback API returns 401 Unauthorized for invalid token")
 	public void verifyUserFeedback_InvalidAuthorizationToken() {
 		Response response = ExamEndPoints.userFeedback(true, true, "13355", "invalidToken123", false, null);
 		ApiUtils.validateStatusCode(response, 401);
-		AssertJUnit.assertTrue(response.getContentType().contains("text/html"));
+		Assert.assertTrue(response.getContentType().contains("text/html"));
 		String body = response.getBody().asString();
-		AssertJUnit.assertTrue(body.contains("Unauthorized"));
+		Assert.assertTrue(body.contains("Unauthorized"));
 	}
 
 	@Test(description = "Verify User Feedback API returns 400 Bad Request Error when staff number parameter is missing")
@@ -90,7 +88,7 @@ public class UserFeedBackApiTest extends BaseTest {
 		Response response = ExamEndPoints.userFeedback(true, false, null, null, false, null);
 		ApiUtils.validateStatusCode(response, 500);
 		String body = response.getBody().asString();
-		AssertJUnit.assertTrue(body.toLowerCase().contains("required request parameter 'staffNumber'"));
+		Assert.assertTrue(body.toLowerCase().contains("required request parameter 'staffNumber'"));
 
 		// Add more assertions for other error cases if needed
 	}

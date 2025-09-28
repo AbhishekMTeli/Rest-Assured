@@ -1,7 +1,5 @@
 package testScripts;
 
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
 import static io.restassured.RestAssured.given;
 
 import org.testng.Assert;
@@ -25,7 +23,7 @@ public class LaunchExamDataApiTest extends BaseTest {
 		ApiUtils.validateNotNull(response, "courseModel.courseId");
 		ApiUtils.validateNotNull(response, "courseModel.courseTitle");
 		ApiUtils.validateNotNull(response, "courseModel.courseType");
-		AssertJUnit.assertEquals(ApiUtils.getValue(response, "courseModel.courseType"), "Course",
+		Assert.assertEquals(ApiUtils.getValue(response, "courseModel.courseType"), "Course",
 				"Field courseType does not match expected value");
 		ApiUtils.validateNotNull(response, "sectionList");
 		ApiUtils.validateNotNull(response, "sectionList[0].pubSectionId");

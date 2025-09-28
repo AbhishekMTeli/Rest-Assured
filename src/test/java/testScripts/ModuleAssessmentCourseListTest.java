@@ -1,6 +1,5 @@
 package testScripts;
 
-import org.testng.annotations.Test;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 import org.testng.annotations.Test;

@@ -1,7 +1,5 @@
 package testScripts;
 
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.lessThan;

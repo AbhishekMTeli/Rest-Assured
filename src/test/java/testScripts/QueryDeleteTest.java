@@ -1,6 +1,5 @@
 package testScripts;
 
-import org.testng.annotations.Test;
 import static org.hamcrest.Matchers.equalTo;
 
 import org.testng.annotations.Test;
