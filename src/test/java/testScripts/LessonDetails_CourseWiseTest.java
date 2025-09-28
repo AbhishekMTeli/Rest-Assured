@@ -1,6 +1,7 @@
 package testScripts;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 import base.BaseTest;
 import endpoints.CourseEndPoints;

@@ -1,5 +1,7 @@
 package testScripts;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import static io.restassured.RestAssured.given;
 
 import java.io.IOException;

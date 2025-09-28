@@ -1,5 +1,8 @@
 package testScripts;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.AssertJUnit;
 import static io.restassured.RestAssured.given;
 
 import org.testng.Assert;

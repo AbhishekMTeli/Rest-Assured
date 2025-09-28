@@ -2,5 +2,47 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="5" name="Test">
+    <classes>
+      <class name="testScripts.CourseCalenderTest"/>
+      <class name="testScripts.ExamFeedBackTest"/>
+      <class name="testScripts.QuestionAccuracyTest"/>
+      <class name="testScripts.CourseTime_AnalysisTest"/>
+      <class name="testScripts.SimCalenderTest"/>
+      <class name="testScripts.GetQueryChatsTest"/>
+      <class name="testScripts.JoinSelfStudyCourseTest"/>
+      <class name="testScripts.DowloadResourceTest"/>
+      <class name="testScripts.DownloadExcelTest"/>
+      <class name="testScripts.TrainingProfileDataTest"/>
+      <class name="testScripts.PostQueryChatTest"/>
+      <class name="testScripts.LessonDetails_CourseWiseTest"/>
+      <class name="testScripts.ModuleAssessmentCourseListTest"/>
+      <class name="testScripts.CloseQueryTest"/>
+      <class name="testScripts.FailureReportTest"/>
+      <class name="testScripts.SaveUserCourseDetailsTest"/>
+      <class name="testScripts.AdminGetAllQueriesTest"/>
+      <class name="testScripts.ExamMarks_AnalysisTest"/>
+      <class name="testScripts.QueryDeleteTest"/>
+      <class name="testScripts.CourseCatalogTest"/>
+      <class name="testScripts.SendQueryAPITest"/>
+      <class name="testScripts.UserCourseExpiryTest"/>
+      <class name="testScripts.QueryResponseAPITest"/>
+      <class name="testScripts.GeneralInfoAndGreetingsTest"/>
+      <class name="testScripts.ExamListApiTest"/>
+      <class name="testScripts.UpdateNotificationStatusTest"/>
+      <class name="testScripts.LaunchExamDataApiTest"/>
+      <class name="testScripts.BookMarkCourseTest"/>
+      <class name="testScripts.GetNotificationTest"/>
+      <class name="testScripts.IncompleteAssessmentsTest"/>
+      <class name="testScripts.SaveExamResultsApiTest"/>
+      <class name="testScripts.GetUserInfoTest"/>
+      <class name="testScripts.ExamTime_AnalysisTest"/>
+      <class name="testScripts.AssessmentAnalysisTest"/>
+      <class name="testScripts.CourseUtilizationSummaryTest"/>
+      <class name="testScripts.UserFeedBackApiTest"/>
+      <class name="testScripts.ReferenceMaterialTest"/>
+      <class name="testScripts.AnalysisTest"/>
+      <class name="testScripts.GlobalSearchTest"/>
+      <class name="testScripts.FOCIPCertificateTest"/>
+    </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
