@@ -23,6 +23,7 @@ public class MockingTest {
 	@Test
 	public void test() {
 		String response = ApiClient.get("http://localhost:8080/sample");
+		System.out.println(response);
 		Assert.assertTrue(response.contains("Stubbed response"));
 	}
 
